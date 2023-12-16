@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(220deg, #6c6977, #f27340, #6c6977);
+  display: flex;
+  text-align: center;
+  justify-items: center;
+  padding: 10px 40px;
+  box-shadow: inset 0 0 15px black;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  font-size: 70px;
+  font-weight: 500;
+}
+
+.textPage {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #1f1e1e;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 50%;
+}

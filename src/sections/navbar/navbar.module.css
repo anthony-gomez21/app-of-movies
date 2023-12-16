@@ -1,0 +1,123 @@
+.container {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+}
+
+h1 {
+  width: 40%;
+  color: #bbb;
+  padding: 0 30px;
+  margin-left: 65px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.containerBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconBtn {
+  font-size: 23px;
+  transition: transform 0.4s ease;
+}
+
+.containerBtn button:hover .iconBtn {
+  transform: rotateY(180deg);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.formContainer {
+  display: flex;
+  position: relative;
+}
+
+input {
+  width: 350px;
+  color: #ffffffca;
+  display: flex;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  outline: 2px solid #ffffffca;
+  position: relative;
+  overflow: hidden;
+  background: none;
+}
+
+.formContainer > button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  background: none;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.icon {
+  font-size: 25px;
+  color: #fff;
+  transition: transform 0.4s ease, top 0.4s ease;
+  position: relative;
+  top: 0;
+}
+
+.iconTop {
+  font-size: 25px;
+  color: #71c8fe;
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: -100px;
+}
+
+.formContainer > button:hover .icon {
+  transform: translateY(100px);
+}
+
+.formContainer > button:hover .iconTop {
+  transform: translateY(107px);
+}
+
+@media (max-width: 1350px) {
+  .navbar {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    display: grid;
+  }
+
+  h1 {
+    display: none;
+  }
+}

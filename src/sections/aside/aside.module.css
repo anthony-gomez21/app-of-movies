@@ -1,0 +1,190 @@
+.asideContainer {
+  width: max-content;
+  height: 100%;
+  background: #343a40;
+  position: relative;
+}
+
+.hamburgerButton {
+  display: none;
+}
+
+.aside {
+  width: 100%;
+  min-height: 800px;
+  display: grid;
+  text-align: center;
+  place-content: center;
+  box-shadow: 0 0 30px 1px #000000;
+  padding: 30px;
+  background: linear-gradient(110deg, #3c4146, #8d939a, #212529);
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.textAside {
+  color: #fff;
+  text-shadow: 0 0 10px #ad4747;
+  font-size: 28px;
+  padding: 3px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #111;
+  font-weight: 400;
+  margin-top: 35px;
+}
+
+.loadingContainer {
+  width: 330px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.btnGenreContainer {
+  display: grid;
+  place-content: center;
+  gap: 2px;
+  margin-bottom: 30px;
+}
+
+.btnGenre {
+  display: flex;
+  height: 35px;
+  width: 250px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #111;
+  cursor: pointer;
+  align-items: center;
+  font-weight: 500;
+  transition: border-bottom-color 0.5s ease;
+  gap: 20px;
+}
+
+.iconGenre {
+  color: #e2dada;
+  font-size: 15px;
+  transform: translateX(10px);
+  transition: transform 0.5s ease;
+}
+
+.btnGenre:hover .iconGenre {
+  color: #e5bab3;
+  font-size: 12px;
+  transform: translateX(58px);
+}
+
+.genreName {
+  font-size: 20px;
+  transition: transform 0.5s ease;
+}
+
+.btnGenre:hover {
+  border-bottom: 3px solid #fff;
+  border-radius: 8px;
+}
+
+.btnGenre:hover .genreName {
+  transform: translateX(45px);
+}
+
+.btnContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.form {
+  display: grid;
+  place-content: center;
+  gap: 10px;
+}
+
+.inputs {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  align-items: center;
+}
+
+.input {
+  width: 120px;
+  text-align: center;
+  border: none;
+  background: rgb(231, 231, 231);
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.btnContainer button:hover {
+  background: #212020;
+}
+
+.btnContainer button p {
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+
+.btnContainer button:hover p {
+  font-size: 22px;
+}
+
+.active {
+  background: red;
+}
+
+@media (max-width: 1350px) {
+  .hamburgerButton {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    background: #212529;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    z-index: 2;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .hamburgerButton:active {
+    color: red;
+  }
+
+  .asideContainer {
+    background: none;
+  }
+
+  .aside {
+    transform: translateX(0);
+  }
+
+  .aside.open {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 800px) {
+  .hamburgerButton {
+    width: 40px;
+    height: 35px;
+    top: 20px;
+    font-size: 20px;
+  }
+}

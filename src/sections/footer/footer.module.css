@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  background: #111;
+  color: #bbb;
+  justify-content: center;
+  align-items: center;
+}
+
+.container span {
+  font-size: 13px;
+}
