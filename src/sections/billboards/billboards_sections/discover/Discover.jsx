@@ -25,27 +25,31 @@ function Discover({
       </h2>
 
       <div className={styles.imgContainer}>
-        {dataDiscover.map((discover) => (
-          <div
-            className={styles.imgPosterPathContainer}
-            key={discover.id}
-            onClick={() => openModal(discover)}
-          >
+        {dataDiscover.length > 0 ? (
+          dataDiscover.map((discover) => (
             <div
-              style={{
-                backgroundImage: `url(https://image.tmdb.org/t/p/w500/${discover.poster_path})`,
-              }}
-              className={styles.imgPosterPath}
-            ></div>
-            <div>
-              <h3>
-                {movieOrTv === 'movie'
-                  ? discover.original_title
-                  : discover.original_name}
-              </h3>
+              className={styles.imgPosterPathContainer}
+              key={discover.id}
+              onClick={() => openModal(discover)}
+            >
+              <div
+                style={{
+                  backgroundImage: `url(https://image.tmdb.org/t/p/w500/${discover.poster_path})`,
+                }}
+                className={styles.imgPosterPath}
+              ></div>
+              <div>
+                <h3>
+                  {movieOrTv === 'movie'
+                    ? discover.original_title
+                    : discover.original_name}
+                </h3>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <h1>No hay resultados </h1>
+        )}
       </div>
 
       {/*== BTN NEXT AND PREVIUS =========== */}

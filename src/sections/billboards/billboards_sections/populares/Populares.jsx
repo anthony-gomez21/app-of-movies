@@ -19,20 +19,24 @@ function Populares({
       </h2>
 
       <div className={styles.imgContainer}>
-        {populares.map((popular) => (
-          <div key={popular.id}>
-            <div
-              onClick={() => openModal(popular)}
-              className={styles.imgPosterPath}
-              style={{
-                backgroundImage: `url(https://image.tmdb.org/t/p/w500/${popular.poster_path})`,
-              }}
-            ></div>
-            <h3 className={styles.name}>
-              {movieOrTv === 'movie' ? popular.title : popular.name}
-            </h3>
-          </div>
-        ))}
+        {populares ? (
+          populares.map((popular) => (
+            <div key={popular.id}>
+              <div
+                onClick={() => openModal(popular)}
+                className={styles.imgPosterPath}
+                style={{
+                  backgroundImage: `url(https://image.tmdb.org/t/p/w500/${popular.poster_path})`,
+                }}
+              ></div>
+              <h3 className={styles.name}>
+                {movieOrTv === 'movie' ? popular.title : popular.name}
+              </h3>
+            </div>
+          ))
+        ) : (
+          <h1>No hay resultados</h1>
+        )}
       </div>
 
       {/*== BTN NEXT AND PREVIUS =========== */}

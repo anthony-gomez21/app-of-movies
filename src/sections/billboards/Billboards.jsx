@@ -79,7 +79,7 @@ const Billboards = ({ dataDiscover, movieOrTv, totalPagesDiscover }) => {
     });
 
     setSearchName(filteredResults);
-  }, [page, submitSearch, fetchSearchName]);
+  }, [page, submitSearch, fetchSearchName, movieOrTv, setSearchName]);
 
   return (
     <div className={styles.container}>
@@ -101,18 +101,20 @@ const Billboards = ({ dataDiscover, movieOrTv, totalPagesDiscover }) => {
           totalPages={totalPages}
           openModal={openModal}
         />
-      ) : //  ======== SEARCH BY GENRE ==========================================
+      ) : (
+        //  ======== SEARCH BY GENRE ==========================================
 
-      dataDiscover ? (
-        <Discover
-          changePopular={changePopular}
-          movieOrTv={movieOrTv}
-          dataDiscover={dataDiscover}
-          openModal={openModal}
-          totalPagesDiscover={totalPagesDiscover}
-          totalPages={totalPages}
-        />
-      ) : null}
+        dataDiscover && (
+          <Discover
+            changePopular={changePopular}
+            movieOrTv={movieOrTv}
+            dataDiscover={dataDiscover}
+            openModal={openModal}
+            totalPagesDiscover={totalPagesDiscover}
+            totalPages={totalPages}
+          />
+        )
+      )}
 
       {/*== SHOW MODAL =========== */}
 
