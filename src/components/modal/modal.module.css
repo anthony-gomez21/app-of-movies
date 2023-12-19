@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modalContant {
@@ -27,6 +28,7 @@
 }
 
 .poster_path {
+  display: flex;
   height: 700px;
 }
 
@@ -99,4 +101,36 @@
   text-wrap: pretty;
   font-size: 25px;
   font-weight: 400;
+}
+
+@media (max-width: 950px) {
+  .modalContant {
+    height: 100vh;
+  }
+
+  .dataContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .poster_path {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .textContainer {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 35px;
+  }
+
+  .date {
+    font-size: 30px;
+  }
+
+  .overview {
+    font-size: 20px;
+  }
 }

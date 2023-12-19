@@ -46,6 +46,3 @@ body {
     grid-template-columns: 0 1fr;
   }
 }
-
-@media (max-width: 920px) {
-}
