@@ -42,11 +42,13 @@ const Navbar = () => {
           </button>
         </div>
 
-        <button className={styles.hamburgerButton} onClick={toggleMenu}>
-          ☰
-        </button>
-
         <form onSubmit={handleSubmit} className={styles.formContainer}>
+          <div>
+            <button className={styles.hamburgerButton} onClick={toggleMenu}>
+              ☰
+            </button>
+          </div>
+
           <input
             type="text"
             placeholder="Avengers, Leo, The Creator ..."

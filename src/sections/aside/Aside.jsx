@@ -66,15 +66,13 @@ const Aside = ({ genres, loading }) => {
     }
   }, [page, fetchDiscover]);
 
-  console.log(isMenuOpen);
-
   return (
     <div
       className={`${styles.asideContainer} ${
-        isMenuOpen ? styles.asideContainerOpen : ''
+        !isMenuOpen ? styles.asideContainerOpen : ''
       } `}
     >
-      <aside className={`${styles.aside} ${!isMenuOpen ? styles.open : ''}`}>
+      <aside className={`${styles.aside} ${isMenuOpen ? styles.open : ''}`}>
         <span className={styles.textAside}>Genre of movies and tv</span>
         {loading ? (
           <div className={styles.loadingContainer}>

@@ -7,10 +7,7 @@
 
 .asideContainerOpen {
   z-index: -100;
-}
-
-.hamburgerButton {
-  display: none;
+  transition: all 1s;
 }
 
 .aside {
@@ -154,6 +151,7 @@
 
   .aside {
     transform: translateX(-100%);
+    z-index: 100;
   }
 
   .aside.open {
