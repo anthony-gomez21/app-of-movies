@@ -13,7 +13,9 @@
 }
 
 .modalContant {
-  width: 1300px;
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
   height: 700px;
   border-radius: 10px;
   overflow: hidden;
@@ -105,7 +107,8 @@
 
 @media (max-width: 950px) {
   .modalContant {
-    height: 100vh;
+    width: 100%;
+    height: 500px;
   }
 
   .dataContainer {
@@ -114,6 +117,7 @@
   }
 
   .poster_path {
+    display: none;
     height: 300px;
     object-fit: cover;
   }
@@ -122,15 +126,25 @@
     padding: 20px;
   }
 
-  .title {
-    font-size: 35px;
+  .onClose {
+    width: 40px;
+    height: 40px;
   }
 
-  .date {
+  .icon {
+    margin-top: 6px;
+    font-size: 25px;
+  }
+
+  .title {
     font-size: 30px;
   }
 
+  .date {
+    font-size: 25px;
+  }
+
   .overview {
-    font-size: 20px;
+    font-size: 16px;
   }
 }

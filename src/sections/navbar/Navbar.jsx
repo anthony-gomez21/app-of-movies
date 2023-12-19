@@ -42,25 +42,29 @@ const Navbar = () => {
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className={styles.formContainer}>
+        <div className={styles.buttonInputContainer}>
           <div>
             <button className={styles.hamburgerButton} onClick={toggleMenu}>
               ☰
             </button>
           </div>
 
-          <input
-            type="text"
-            placeholder="Avengers, Leo, The Creator ..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+          <form onSubmit={handleSubmit} className={styles.formContainer}>
+            <div className={styles.inputContainer}>
+              <input
+                type="text"
+                placeholder="Avengers, Leo, The Creator ..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
 
-          <button type="submit">
-            <FontAwesomeIcon className={styles.iconTop} icon={faSearch} />
-            <FontAwesomeIcon className={styles.icon} icon={faSearch} />
-          </button>
-        </form>
+              <button type="submit">
+                <FontAwesomeIcon className={styles.iconTop} icon={faSearch} />
+                <FontAwesomeIcon className={styles.icon} icon={faSearch} />
+              </button>
+            </div>
+          </form>
+        </div>
       </nav>
     </div>
   );

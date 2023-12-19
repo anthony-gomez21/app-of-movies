@@ -1,4 +1,5 @@
 .container {
+  width: 100%;
   display: flex;
   padding: 15px;
   align-items: center;
@@ -34,6 +35,12 @@ h1 {
   transform: rotateY(180deg);
 }
 
+.buttonInputContainer {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 50px max-content;
+}
+
 .hamburgerButton {
   display: none;
 }
@@ -46,13 +53,17 @@ form {
 }
 
 .formContainer {
+  width: 100%;
   display: flex;
   position: relative;
-  gap: 30px;
+}
+
+.inputContainer {
+  position: relative;
 }
 
 input {
-  width: 350px;
+  width: 100%;
   color: #ffffffca;
   display: flex;
   border: none;
@@ -60,12 +71,11 @@ input {
   font-size: 16px;
   border-radius: 25px;
   outline: 2px solid #ffffffca;
-  position: relative;
   overflow: hidden;
   background: none;
 }
 
-.formContainer > button {
+.inputContainer > button {
   width: 40px;
   height: 40px;
   display: flex;
@@ -98,15 +108,19 @@ input {
   top: -100px;
 }
 
-.formContainer > button:hover .icon {
+.inputContainer > button:hover .icon {
   transform: translateY(100px);
 }
 
-.formContainer > button:hover .iconTop {
+.inputContainer > button:hover .iconTop {
   transform: translateY(107px);
 }
 
 @media (max-width: 1350px) {
+  .formContainer {
+    justify-content: space-evenly;
+  }
+
   .navbar {
     justify-content: center;
     gap: 30px;
@@ -125,9 +139,10 @@ input {
     top: 20px;
     left: 40px;
     font-size: 25px;
+    font-weight: 800;
     cursor: pointer;
-    background: #212529;
-    color: #fff;
+    background: #fff;
+    color: #111;
     border: none;
     padding: 5px;
     z-index: 2;
@@ -147,5 +162,34 @@ input {
 
   h1 {
     display: none;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  input {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 350px) {
+  input {
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .iconTop {
+    font-size: 20px;
+  }
+
+  .hamburgerButton {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
   }
 }

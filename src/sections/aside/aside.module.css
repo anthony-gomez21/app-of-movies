@@ -6,7 +6,7 @@
 }
 
 .asideContainerOpen {
-  z-index: -100;
+  z-index: 100;
   transition: all 1s;
 }
 
@@ -145,6 +145,11 @@
 }
 
 @media (max-width: 1350px) {
+  .asideContainerOpen {
+    z-index: -100;
+    transition: all 1s;
+  }
+
   .asideContainer {
     background: none;
   }
