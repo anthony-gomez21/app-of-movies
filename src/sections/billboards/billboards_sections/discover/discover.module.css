@@ -2,6 +2,7 @@
   width: 100%;
   min-height: 1200px;
   display: grid;
+  transition: all ease 0.5s;
 }
 
 .btnContainer {
@@ -43,7 +44,8 @@
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(19, 19, 19, 0.736);
-  transition: box-shadow 0.5s, transform 0.5s;
+  transition: all ease 0.5s;
+  touch-action: none;
 }
 
 .imgPosterPath:hover {
