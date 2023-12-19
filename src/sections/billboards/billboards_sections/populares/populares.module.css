@@ -20,6 +20,7 @@
   grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
   gap: 20px;
   padding: 10px;
+  z-index: 1;
 }
 
 .imgPosterPath {
@@ -58,6 +59,7 @@
   .imgPosterPath {
     width: 126px;
     height: 210px;
+    cursor: default;
   }
 }
 

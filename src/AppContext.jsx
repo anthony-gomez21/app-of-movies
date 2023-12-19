@@ -37,6 +37,13 @@ export const AppProvider = ({ children }) => {
     setSearch('');
   };
 
+  //   FOR OPEN AND CLOSE ASIDE
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const contextValues = {
     searchData,
     setSearchData,
@@ -55,6 +62,8 @@ export const AppProvider = ({ children }) => {
     changePage,
     handleSearchData,
     typeChange,
+    toggleMenu,
+    isMenuOpen,
   };
 
   return (

@@ -2,7 +2,11 @@
   width: max-content;
   height: 100%;
   background: #343a40;
-  position: relative;
+  z-index: 100;
+}
+
+.asideContainerOpen {
+  z-index: -100;
 }
 
 .hamburgerButton {
@@ -144,30 +148,6 @@
 }
 
 @media (max-width: 1350px) {
-  .hamburgerButton {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 20px;
-    left: 40px;
-    font-size: 30px;
-    cursor: pointer;
-    background: #212529;
-    color: #fff;
-    border: none;
-    padding: 5px;
-    z-index: 2;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .hamburgerButton:active {
-    color: red;
-  }
-
   .asideContainer {
     background: none;
   }
@@ -178,14 +158,6 @@
 
   .aside.open {
     transform: translateX(0);
-  }
-}
-
-@media (max-width: 800px) {
-  .hamburgerButton {
-    width: 40px;
-    height: 35px;
-    top: 20px;
-    font-size: 20px;
+    z-index: 100;
   }
 }

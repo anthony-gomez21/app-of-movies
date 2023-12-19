@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
 import styles from './navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm, faSearch, faTv } from '@fortawesome/free-solid-svg-icons';
 import { useAppContext } from '../../AppContext';
 
 const Navbar = () => {
-  const { movieOrTv, typeChange, setSubmitSearch, search, setSearch } =
-    useAppContext();
+  const {
+    movieOrTv,
+    typeChange,
+    setSubmitSearch,
+    search,
+    setSearch,
+    toggleMenu,
+  } = useAppContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,6 +41,10 @@ const Navbar = () => {
             <FontAwesomeIcon className={styles.iconBtn} icon={faTv} />
           </button>
         </div>
+
+        <button className={styles.hamburgerButton} onClick={toggleMenu}>
+          ☰
+        </button>
 
         <form onSubmit={handleSubmit} className={styles.formContainer}>
           <input

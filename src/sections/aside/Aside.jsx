@@ -6,7 +6,8 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { useAppContext } from '../../AppContext';
 
 const Aside = ({ genres, loading }) => {
-  const { handleSearchData, changePage, page, setSearchName } = useAppContext();
+  const { handleSearchData, changePage, page, setSearchName, isMenuOpen } =
+    useAppContext();
 
   const [activeGenreId, setActiveGenreId] = useState(
     genres.length > 0 ? genres[0].id : null
@@ -20,11 +21,6 @@ const Aside = ({ genres, loading }) => {
   });
 
   const fetchDiscover = FetchDiscover(page);
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   // PARA OBTENER EL ID DEL GENERO
 
@@ -70,12 +66,15 @@ const Aside = ({ genres, loading }) => {
     }
   }, [page, fetchDiscover]);
 
+  console.log(isMenuOpen);
+
   return (
-    <div className={styles.asideContainer}>
-      <button className={styles.hamburgerButton} onClick={toggleMenu}>
-        ☰
-      </button>
-      <aside className={`${styles.aside} ${isMenuOpen ? styles.open : ''}`}>
+    <div
+      className={`${styles.asideContainer} ${
+        isMenuOpen ? styles.asideContainerOpen : ''
+      } `}
+    >
+      <aside className={`${styles.aside} ${!isMenuOpen ? styles.open : ''}`}>
         <span className={styles.textAside}>Genre of movies and tv</span>
         {loading ? (
           <div className={styles.loadingContainer}>

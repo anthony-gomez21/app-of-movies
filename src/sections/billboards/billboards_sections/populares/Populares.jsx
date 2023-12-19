@@ -24,6 +24,7 @@ function Populares({
             <div key={popular.id}>
               <div
                 onClick={() => openModal(popular)}
+                onTouchStart={() => openModal(popular)}
                 className={styles.imgPosterPath}
                 style={{
                   backgroundImage: `url(https://image.tmdb.org/t/p/w500/${popular.poster_path})`,

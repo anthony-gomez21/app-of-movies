@@ -41,6 +41,10 @@ body {
   border-radius: 10px;
 }
 
+/* button of open and close aside */
+
+/* responsive */
+
 @media (max-width: 1350px) {
   .container {
     grid-template-columns: 0 1fr;
