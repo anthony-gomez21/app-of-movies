@@ -9,6 +9,14 @@ export const AppProvider = ({ children }) => {
   const [page, setPage] = useState(1);
   const [searchName, setSearchName] = useState([]);
 
+  //   FOR OPEN AND CLOSE ASIDE
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   //   NAVBAR SEARCH
 
   const [search, setSearch] = useState('');
@@ -19,6 +27,8 @@ export const AppProvider = ({ children }) => {
   const changePage = (value) => {
     setPage(value);
   };
+
+  console.log(isMenuOpen);
 
   //   OBTENER EL NUEVO VALOR DE SEARCHDATA Y PODER FILTRAR ,
   //   TAMBIEN PARA MOSTRAR O NO LA SECCION DE POPULARES
@@ -35,13 +45,6 @@ export const AppProvider = ({ children }) => {
     setMovieOrTv(data);
     changePage(1);
     setSearch('');
-  };
-
-  //   FOR OPEN AND CLOSE ASIDE
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
   };
 
   const contextValues = {

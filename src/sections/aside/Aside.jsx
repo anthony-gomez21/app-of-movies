@@ -6,8 +6,14 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { useAppContext } from '../../AppContext';
 
 const Aside = ({ genres, loading }) => {
-  const { handleSearchData, changePage, page, setSearchName, isMenuOpen } =
-    useAppContext();
+  const {
+    handleSearchData,
+    changePage,
+    page,
+    setSearchName,
+    isMenuOpen,
+    toggleMenu,
+  } = useAppContext();
 
   const [activeGenreId, setActiveGenreId] = useState(
     genres.length > 0 ? genres[0].id : null
@@ -65,6 +71,8 @@ const Aside = ({ genres, loading }) => {
       handleGenre(genres[0].id);
     }
   }, [page, fetchDiscover]);
+
+  console.log(isMenuOpen);
 
   return (
     <div
@@ -124,7 +132,10 @@ const Aside = ({ genres, loading }) => {
               </div>
               <div className={styles.btnContainer}>
                 <button
-                  onClick={() => changePage(1)}
+                  onClick={() => {
+                    changePage(1);
+                    toggleMenu();
+                  }}
                   type="submit"
                   className="btn"
                 >
